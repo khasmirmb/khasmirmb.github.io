@@ -75,7 +75,11 @@ body {
   
   
   .profile-small{
-    width: 300px;
+    width: 280px;
+  }
+
+  .profile-name{
+    font-family: cursive;
   }
 
   .navbar {
@@ -83,10 +87,13 @@ body {
     top: 0;
     background-color: #333;
     z-index: 100;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
   }
 
-  .navbar-nav .nav-link {
-    color: #fff !important;
+  .navbar ul li a{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
   }
 
   .section {
@@ -113,7 +120,7 @@ body {
 
   .title-badge{
     font-size: 15px;
-    background: #2A343D;
+    background: #3c3f58;
     color: white;
     padding: 10px 15px;
     font-weight: 400;
@@ -128,7 +135,7 @@ body {
   .years-of-experience-badge {
     font-size: 100px;
     margin-bottom: 10px;
-    background: #1C748C;
+    background: #3c3f58;
   }
 
   .years-of-experience-text {
@@ -146,7 +153,7 @@ body {
   }
   
   .span-name{
-    text-decoration: underline solid #1C748C 10%;
+    text-decoration: underline solid #3bba9c 10%;
   }
 
   .self-description{
@@ -154,4 +161,9 @@ body {
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 40px;
+  }
+  
+  .about-btn:hover{
+    background-color: #3c3f58;
+    border-color: #3bba9c;
   }
