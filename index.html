@@ -21,36 +21,37 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background: #17252A;">
-    <a class="navbar-brand" href="#">My Portfolio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background: #2A343D;">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#hero">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#services">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#resume">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#clients">Clients</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#resume">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#clients">Clients</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -59,14 +60,14 @@
        <div class="hero-wrap">
         <div class="hero-mask"></div>
         <div class="hero-bg" style="background-image:url('images/hero.jpg'); filter: blur(5px) brightness(0.5);"></div>
-        <div class="hero-content d-flex flex-column fullscreen py-5">
+      <div class="hero-content d-flex flex-column fullscreen py-5">
 			<div class="container my-auto">
 			<div class="row">
 			<div class="col-lg-10 mx-auto text-center">
               <div class="bg-white shadow rounded-pill p-2 mb-4 d-inline-block wow zoomIn"> <img class="img-fluid rounded-pill d-block profile-small" src="images/profile.jpg" title="I'm Khasmir" alt=""> </div>
-              <h2 class="text-10 text-white text-uppercase fw-600 mb-4 wow fadeInUp">HELLO! I'M AL-KHASMIR - WEB APPLICATION DEVELOPER AND DATABASE MANAGEMENT EXPERT.</h2>
-              <p class="text-5 text-light pb-3 wow fadeInUp">based in Zamboanga City, Philippines.</p>
-              <a href="#about" class="btn btn-primary rounded-0 smooth-scroll wow fadeInUp white-text">About Me</a>
+              <h2 class="text-10 text-white text-uppercase fw-600 mb-4">HELLO! I'M AL-KHASMIR - WEB APPLICATION DEVELOPER AND DATABASE MANAGEMENT EXPERT.</h2>
+              <p class="text-5 text-light pb-3">based in Zamboanga City, Philippines.</p>
+              <a href="#about" class="btn btn-secondary rounded-0 smooth-scroll white-text" style="background: #1C748C; border: #1C748C;">About Me</a>
 			</div>
 			</div>
 			</div>
@@ -78,15 +79,28 @@
 
 
   <!-- About section -->
+  <!-- About Me section -->
   <section id="about" class="section">
     <div class="container">
-      <h2>About Me</h2>
-      <p>Add your content here.</p>
+      <div class="text-center">
+        <span class="badge rounded-pill title-badge">About Me</span>
+        <h1 class="display-4 font-weight-bold about-heading">Know More About Me</h1>
+      </div>
+      <div class="row justify-content-center align-items-center text-center">
+        <div class="col-md-8">
+          <h2 class="text-justify self-introduction">Hi, I'm <span class="font-weight-bold span-name">AL-Khasmir</span></h2>
+          <p class="lh-sm lead self-description">I'm a web application developer with a strong expertise in database management. I have a passion for creating efficient and user-friendly web applications. With my skills in web development and database management, I am able to design and implement robust solutions that meet the needs of modern businesses. I'm dedicated to continuously expanding my knowledge and staying up-to-date with the latest technologies in the field.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="badge badge-primary years-of-experience-badge">3+</div>
+          <p class="lead years-of-experience-text">Years of <span>Experience</span></p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Services section -->
-  <section id="services" class="section">
+  <section id="services" class="section bg-light">
     <div class="container">
       <h2>Services</h2>
       <p>Add your content here.</p>

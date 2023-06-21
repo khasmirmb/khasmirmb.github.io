@@ -78,7 +78,6 @@ body {
     width: 300px;
   }
 
-
   .navbar {
     position: sticky;
     top: 0;
@@ -91,12 +90,15 @@ body {
   }
 
   .section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #333;
-    text-align: center;
+    position: relative;
+    padding: 6.5rem 0;
+    overflow: hidden;
+  }
+  
+  @media (max-width: 767.98px) {
+    .section {
+      padding: 3.5rem 0;
+    }
   }
 
   .footer {
@@ -107,4 +109,48 @@ body {
     bottom: 0;
     width: 100%;
     height: 30%;
+  }
+
+  .title-badge{
+    font-size: 15px;
+    background: #2A343D;
+    color: white;
+    padding: 10px 15px;
+    font-weight: 400;
+  }
+
+  .about-heading {
+    margin-top: 10px;
+    margin-bottom: 80px;
+    font-weight: bold;
+  }
+
+  .years-of-experience-badge {
+    font-size: 100px;
+    margin-bottom: 10px;
+    background: #1C748C;
+  }
+
+  .years-of-experience-text {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .years-of-experience-text span {
+    font-size: 18px;
+    font-weight: bolder;
+  }
+
+  .self-introduction {
+    font-weight: 400;
+  }
+  
+  .span-name{
+    text-decoration: underline solid #1C748C 10%;
+  }
+
+  .self-description{
+    text-align: start;
+    font-size: 20px;
+    font-weight: 400;
   }
