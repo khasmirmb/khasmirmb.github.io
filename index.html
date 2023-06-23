@@ -3,22 +3,37 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
   <title>Khasmir - Personal Portfolio</title>
+  <meta name="author" content="khasmirmb">
 
   <!-- Web Fonts -->
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
 
   <!-- Stylesheet -->
 
+  <!-- Animate -->
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.min.css" />
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.carousel.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css" />
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 
 <body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+    </div>
+
 
     <!-- Hero section -->
     <section id="home" class="d-none d-md-block">
@@ -40,7 +55,7 @@
 			</div>
 			</div>
 			</div>
-			<div class="container py-2 text-center"> <a href="#about" class="scroll-down-arrow text-white smooth-scroll"><span class="animated"><i class="fas fa-arrow-down"></i></span></a> </div>
+			<div class="container py-2 text-center"><a href="#about" class="text-white smooth-scroll"><i class="fas fa-arrow-down"></i></a></div>
 		</div>
 	  </div>
     </section>
@@ -55,7 +70,7 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link active" href="#home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about">About</a>
@@ -85,12 +100,12 @@
   <section id="about" class="section">
     <div class="container">
       <div class="text-center">
-        <span class="badge rounded-pill title-badge">About Me</span>
-        <h1 class="display-4 font-weight-bold about-heading">Know More About Me</h1>
+        <span class="badge rounded-pill title-badge mb-2">About Me</span>
+        <h2 class="font-weight-bold about-heading">Know More About Me</h2>
       </div>
-      <div class="row justify-content-center align-items-center text-center">
+      <div class="row justify-content-center align-items-center">
         <div class="col-md-8">
-          <h2 class="text-justify self-introduction">Hi, I'm <span class="font-weight-bold span-name">AL-Khasmir</span></h2>
+          <h3 class="text-justify self-introduction">Hi, I'm <span class="span-name">AL-Khasmir</span></h3>
           <p class="lh-sm lead self-description">I'm a web application developer with a strong expertise in database management. I have a passion for creating efficient and user-friendly web applications. With my skills in web development and database management, I am able to design and implement robust solutions that meet the needs of modern businesses. I'm dedicated to continuously expanding my knowledge and staying up-to-date with the latest technologies in the field.</p>
         </div>
         <div class="col-md-4">
@@ -104,8 +119,27 @@
   <!-- Services section -->
   <section id="services" class="section bg-light">
     <div class="container">
-      <h2>Services</h2>
-      <p>Add your content here.</p>
+      <div class="text-center mb-5">
+        <span class="badge rounded-pill title-badge mb-2">What I Do?</span>
+        <h1 class="fw-bold">How I can help your next project</h1>
+      </div>
+      <div class="row justify-content-center align-items-center text-center">
+        <div class="col-md-4 text-center mt-4">
+          <i class="display-4 fa-solid fa-database mb-3" style="color: #3c3f58;"></i>
+          <h4 class="fw-bold mt-2">Database Management</h4>
+          <p class="lh-base text-muted">Streamline your data management with my expertise in database management. I offer efficient solutions for organizing, storing, and retrieving data, ensuring optimal performance, enhanced security, and informed decision-making. Let me handle your database needs, so you can focus on driving your business forward.</p>
+        </div>
+        <div class="col-md-4 text-center mt-4">
+          <i class="display-4 fa-solid fa-code mb-3" style="color: #3c3f58;"></i>
+          <h4 class="fw-bold mt-2">Web and Mobile Development</h4>
+          <p class="lh-base text-muted">I specialize in web and mobile development, helping clients bring their ideas to life. With my expertise in both front-end and back-end technologies, I create responsive and user-friendly applications that deliver a seamless experience across devices. From designing intuitive user interfaces to implementing robust functionality, I ensure that my clients' digital solutions meet their specific needs and drive business growth.</p>
+        </div>
+        <div class="col-md-4 text-center mt-4">
+          <i class="display-4 fa-solid fa-chart-pie mb-3" style="color: #3c3f58;"></i>
+          <h4 class="fw-bold mt-2">Data Analysis and Visualization</h4>
+          <p class="lh-base text-muted">Unlock the power of your data with my expertise in data analysis and visualization. I provide actionable insights and compelling visualizations that help businesses make informed decisions and drive growth. From data cleaning and modeling to interactive dashboards and reports, I deliver data-driven solutions that empower you to extract maximum value from your information assets.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -148,9 +182,32 @@
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- JavaScript --> 
+  <script src="vendor/jquery/jquery.min.js"></script> 
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+  <!-- Easing --> 
+  <script src="vendor/jquery.easing/jquery.easing.min.js"></script> 
+  <!-- Appear --> 
+  <script src="vendor/jquery.appear/jquery.appear.min.js"></script> 
+  <!-- WOW animation --> 
+  <script src="vendor/wow/wow.min.js"></script>
+  <!-- Images Loaded --> 
+  <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script> 
+  <!-- Typed --> 
+  <script src="vendor/typed/typed.min.js"></script> 
+  <!-- Parallax Bg --> 
+  <script src="vendor/parallaxie/parallaxie.min.js"></script> 
+  <!-- Owl Carousel --> 
+  <script src="vendor/owl.carousel/owl.carousel.min.js"></script> 
+  <!-- isotope Portfolio Filter --> 
+  <script src="vendor/isotope/isotope.pkgd.min.js"></script> 
+  <!-- Magnific Popup --> 
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3a762edbf5.js" crossorigin="anonymous"></script>
+  <!-- Custom Script --> 
+  <script src="js/theme.js"></script>
+
 </body>
 
 </html>
