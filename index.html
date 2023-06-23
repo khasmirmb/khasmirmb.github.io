@@ -17,8 +17,8 @@
   <link rel="stylesheet" type="text/css" href="vendor/animate/animate.min.css" />
   <!-- Bootstrap -->
   <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
-  <!-- Font Awesome Icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
   <!-- Owl Carousel -->
   <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.carousel.min.css" />
   <!-- Magnific Popup -->
@@ -52,6 +52,12 @@
         <h2 class="profile-name text-white text-uppercase mb-4">A WEB APPLICATION DEVELOPER AND DATABASE MANAGEMENT EXPERT</h2>
         <p class="text-5 text-light pb-3">based in Zamboanga City, Philippines.</p>
         <a href="#about" class="btn btn-outline-secondary btn-lg text-white about-btn">About Me</a>
+        <div class="social-media mt-5">
+          <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
 			</div>
 			</div>
 			</div>
@@ -97,7 +103,7 @@
 
   
   <!-- About Me section -->
-  <section id="about" class="section">
+  <section id="about" class="section bg-light">
     <div class="container">
       <div class="text-center">
         <span class="badge rounded-pill title-badge mb-2">About Me</span>
@@ -117,47 +123,230 @@
   </section>
 
   <!-- Services section -->
-  <section id="services" class="section bg-light">
+  <section id="services" class="section">
     <div class="container">
-      <div class="text-center mb-5">
+      <div class="services-header text-center">
         <span class="badge rounded-pill title-badge mb-2">What I Do?</span>
-        <h1 class="fw-bold">How I can help your next project</h1>
+        <h1 class="fw-bold">My Offered Services</h1>
       </div>
       <div class="row justify-content-center align-items-center text-center">
-        <div class="col-md-4 text-center mt-4">
-          <i class="display-4 fa-solid fa-database mb-3" style="color: #3c3f58;"></i>
-          <h4 class="fw-bold mt-2">Database Management</h4>
-          <p class="lh-base text-muted">Streamline your data management with my expertise in database management. I offer efficient solutions for organizing, storing, and retrieving data, ensuring optimal performance, enhanced security, and informed decision-making. Let me handle your database needs, so you can focus on driving your business forward.</p>
+        <div class="col-md-4 text-center">
+          <i class="display-5 fa-solid fa-database mb-3" style="color: #3c3f58;"></i>
+          <h5 class="fw-bold mt-2">Database Management</h5>
+          <p class="services-description lh-base text-muted">Maximize data efficiency with expert database management. Secure, organize, and access your valuable information seamlessly. Drive informed decisions and business growth with confidence.</p>
         </div>
-        <div class="col-md-4 text-center mt-4">
-          <i class="display-4 fa-solid fa-code mb-3" style="color: #3c3f58;"></i>
-          <h4 class="fw-bold mt-2">Web and Mobile Development</h4>
-          <p class="lh-base text-muted">I specialize in web and mobile development, helping clients bring their ideas to life. With my expertise in both front-end and back-end technologies, I create responsive and user-friendly applications that deliver a seamless experience across devices. From designing intuitive user interfaces to implementing robust functionality, I ensure that my clients' digital solutions meet their specific needs and drive business growth.</p>
+        <div class="col-md-4 text-center">
+          <i class="display-5 fa-solid fa-code mb-3" style="color: #3c3f58;"></i>
+          <h5 class="fw-bold mt-2">Web and Mobile Development</h5>
+          <p class="services-description lh-base text-muted">Elevate your digital presence with my web and mobile development skills. Deliver seamless user experiences and drive audience engagement through innovative applications.</p>
         </div>
-        <div class="col-md-4 text-center mt-4">
-          <i class="display-4 fa-solid fa-chart-pie mb-3" style="color: #3c3f58;"></i>
-          <h4 class="fw-bold mt-2">Data Analysis and Visualization</h4>
-          <p class="lh-base text-muted">Unlock the power of your data with my expertise in data analysis and visualization. I provide actionable insights and compelling visualizations that help businesses make informed decisions and drive growth. From data cleaning and modeling to interactive dashboards and reports, I deliver data-driven solutions that empower you to extract maximum value from your information assets.</p>
+        <div class="col-md-4 text-center">
+          <i class="display-5 fa-solid fa-chart-pie mb-3" style="color: #3c3f58;"></i>
+          <h5 class="fw-bold mt-2">Data Analysis and Visualization</h5>
+          <p class="services-description lh-base text-muted">Unleash the potential of your data with my expertise in data analysis and visualization. Gain valuable insights and communicate complex information effectively through impactful visualizations and data-driven narratives.</p>
         </div>
       </div>
+      <section id="skills" class="skills-section mt-4">
+        <div class="container">
+          <div class="skills-header text-center">
+            <h2 class="section-title">My Skills</h2>
+            <div class="line"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="skill-item">
+                <h5 class="skill-name">HTML/CSS</h5>
+                <div class="progress">
+                  <div id="html-css-progress" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <span class="skill-percentage" id="html-css-percentage">100%</span>
+              </div>
+              <div class="skill-item">
+                <h5 class="skill-name">Javascript</h5>
+                <div class="progress">
+                  <div id="javascript-progress" class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <span class="skill-percentage" id="javascript-percentage">90%</span>
+              </div>
+              <div class="skill-item">
+                <h5 class="skill-name">PHP</h5>
+                <div class="progress">
+                  <div id="php-progress" class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <span class="skill-percentage" id="php-percentage">90%</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="skill-item">
+                <h5 class="skill-name">Machine Learning/Data Analytics</h5>
+                <div class="progress">
+                  <div id="ml-da-progress" class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <span class="skill-percentage" id="ml-da-percentage">85%</span>
+              </div>
+              <div class="skill-item">
+                <h5 class="skill-name">Design</h5>
+                <div class="progress">
+                  <div id="design-progress" class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <span class="skill-percentage" id="design-percentage">80%</span>
+              </div>
+              <div class="skill-item">
+                <h5 class="skill-name">Database</h5>
+                <div class="progress">
+                  <div id="db-progress" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <span class="skill-percentage" id="db-percentage">100%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </section>
 
   <!-- Resume section -->
-  <section id="resume" class="section">
+  <section id="resume" class="section bg-light">
     <div class="container">
-      <h2>Resume</h2>
-      <p>Add your content here.</p>
+      <div class="services-header text-center">
+        <span class="badge rounded-pill title-badge mb-2">Resume</span>
+        <h2 class="fw-bold">My Resume</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <h4 class="resume-heading">Education</h4>
+          <div class="resume-card">
+            <div class="resume-card-header">
+              <h4 class="resume-title">Bachelor of Science in Computer Science</h4>
+              <h5 class="resume-subtitle">Western Mindanao State University</h5>
+            </div>
+            <div class="resume-card-body">
+              <p class="resume-date">2020 - Present</p>
+              <p class="resume-description">Obtained a Bachelor of Science in Computer Science from Western Mindanao State University. Proficient in programming, algorithms, and database management. Passionate about web and mobile application development.</p>
+            </div>
+          </div>
+  
+          <div class="resume-card">
+            <div class="resume-card-header">
+              <h4 class="resume-title">Diploma in Web Development</h4>
+              <h5 class="resume-subtitle">Online Course</h5>
+            </div>
+            <div class="resume-card-body">
+              <p class="resume-date">2021 - 2022</p>
+              <p class="resume-description">Completed online courses in web development, gaining expertise in HTML, CSS, and JavaScript. Skilled in building responsive and user-friendly websites. Continuously expanding knowledge in the latest web development technologies.</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-6">
+          <h4 class="resume-heading">Experience</h3>
+          <div class="resume-card">
+            <div class="resume-card-header">
+              <h4 class="resume-title">Game Debugger</h4>
+              <h5 class="resume-subtitle">Aura Comapny</h5>
+            </div>
+            <div class="resume-card-body">
+              <p class="resume-date">2018 - 2020</p>
+              <p class="resume-description">Worked as a Game Debugger at Aura Company, ensuring the smooth functioning of game mechanics and identifying and fixing bugs. Collaborated with developers and designers to enhance game performance and user experience. Proficient in debugging tools and techniques, with a strong attention to detail.</p>
+            </div>
+          </div>
+  
+          <div class="resume-card">
+            <div class="resume-card-header">
+              <h4 class="resume-title">Intern</h4>
+              <h5 class="resume-subtitle">XYZ Corporation</h5>
+            </div>
+            <div class="resume-card-body">
+              <p class="resume-date">2021 - 2022</p>
+              <p class="resume-description">Interned at XYZ Corporation, gaining practical software development experience. Assisted with coding, testing, and debugging. Developed programming proficiency and problem-solving skills.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Projects section -->
   <section id="projects" class="section">
     <div class="container">
-      <h2>Projects</h2>
-      <p>Add your content here.</p>
+      <div class="projects-header text-center">
+        <span class="badge rounded-pill title-badge mb-2">Portfolio</span>
+        <h2 class="fw-bold">My Recent Works</h2>
+      </div>
+      <div class="row">
+  
+        <!-- Large Project -->
+        <div class="col-lg-8">
+          <div class="project-card large-card">
+            <div class="project-image">
+              <img src="images/project1.png" alt="Project 1" class="img-fluid">
+              <div class="overlay"></div>
+              <div class="project-info">
+                <h3 class="project-title">WeCare Nursing Home</h3>
+                <p class="project-description">Elderly Website: Empowering seniors with user-friendly digital tools for enhanced connectivity, information access, and online services.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Medium Project -->
+        <div class="col-lg-4">
+          <div class="project-card medium-card">
+            <div class="project-image">
+              <img src="images/project2.png" alt="Project 2" class="img-fluid">
+              <div class="overlay"></div>
+              <div class="project-info">
+                <h3 class="project-title">Used Car Prediction</h3>
+                <p class="project-description">Helping buyers make informed decisions by providing accurate predictions and insights on used car values, condition, and performance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Small Projects -->
+        <div class="col-lg-4">
+          <div class="project-card medium-card">
+            <div class="project-image">
+              <img src="images/project3.png" alt="Project 3" class="img-fluid">
+              <div class="overlay"></div>
+              <div class="project-info">
+                <h3 class="project-title">Jeshin.Co</h3>
+                <p class="project-description">A sleek online attendance system, Jeshin.Co simplifies tracking attendance for various purposes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="project-card medium-card">
+            <div class="project-image">
+              <img src="images/project4.png" alt="Project 4" class="img-fluid">
+              <div class="overlay"></div>
+              <div class="project-info">
+                <h3 class="project-title">Tulong</h3>
+                <p class="project-description">Your go-to platform for online freelance services, connecting clients with skilled professionals for a seamless and efficient work collaboration.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <div class="project-card medium-card">
+            <div class="project-image">
+              <img src="images/project5.png" alt="Project 5" class="img-fluid">
+              <div class="overlay"></div>
+              <div class="project-info">
+                <h3 class="project-title">TicketEase</h3>
+                <p class="project-description">Your one-stop online platform for hassle-free ticketing and event management. Easily book, manage, and organize events with our user-friendly website.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
     </div>
   </section>
+  
 
   <!-- Clients section -->
   <section id="clients" class="section">
@@ -174,6 +363,13 @@
       <p>Add your content here.</p>
     </div>
   </section>
+
+  <div class="image-popup">
+    <div class="popup-content">
+      <span class="close-button">&times;</span>
+      <img class="popup-image" src="" alt="Project Image">
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
