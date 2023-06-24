@@ -93,33 +93,80 @@
 
     // Change navbar active class on scroll
     document.addEventListener("DOMContentLoaded", function() {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-
-    const options = {
-        rootMargin: "-60px 0px 0px 0px", // Adjust the root margin if needed (e.g., for sticky header)
-        threshold: 0.5 // Adjust the threshold value as needed for when a section is considered in view
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-            const sectionId = entry.target.getAttribute("id");
-            const navLink = document.querySelector(`.navbar-nav .nav-link[href="#${sectionId}"]`);
-
-            navLinks.forEach(function(link) {
-            link.classList.remove("active");
-            });
-
-            navLink.classList.add("active");
-        }
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+      
+        const options = {
+          rootMargin: "-60px 0px 0px 0px",
+          threshold: 0.5
+        };
+      
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              const sectionId = entry.target.getAttribute("id");
+              const navLink = document.querySelector(`.navbar-nav .nav-link[href="#${sectionId}"]`);
+      
+              navLinks.forEach(function(link) {
+                link.classList.remove("active");
+              });
+      
+              navLink.classList.add("active");
+            }
+          });
+        }, options);
+      
+        sections.forEach(function(section) {
+          observer.observe(section);
         });
-    }, options);
-
-    sections.forEach(function(section) {
-        observer.observe(section);
-    });
-    });
+      
+        let isScrolling = false;
+      
+        // Debounce the scroll event
+        window.addEventListener("scroll", function() {
+          window.clearTimeout(isScrolling);
+      
+          isScrolling = setTimeout(function() {
+            let currentSectionId = null;
+            sections.forEach(function(section) {
+              const rect = section.getBoundingClientRect();
+              if (rect.top <= 60 && rect.bottom >= 60) {
+                currentSectionId = section.getAttribute("id");
+              }
+            });
+      
+            navLinks.forEach(function(link) {
+              const href = link.getAttribute("href").replace("#", "");
+              if (href === currentSectionId) {
+                link.classList.add("active");
+              } else {
+                link.classList.remove("active");
+              }
+            });
+          }, 200); // Adjust the debounce delay as needed
+        });
+      
+        // Update active navbar link on window resize
+        window.addEventListener("resize", function() {
+          let currentSectionId = null;
+          sections.forEach(function(section) {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= 60 && rect.bottom >= 60) {
+              currentSectionId = section.getAttribute("id");
+            }
+          });
+      
+          navLinks.forEach(function(link) {
+            const href = link.getAttribute("href").replace("#", "");
+            if (href === currentSectionId) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+        });
+      });
+       
 
     //Pop Up
     // Get the project cards and overlay elements
@@ -151,3 +198,20 @@
         overlay.style.display = 'none';
     }
     });
+    
+
+    // Carousel
+    $('.quotes').slick({
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 6000,
+        speed: 800,
+        slidesToShow: 1,
+        adaptiveHeight: true
+      });
+      
+      $( document ).ready(function() {
+      $('.no-fouc').removeClass('no-fouc');
+      });
+      

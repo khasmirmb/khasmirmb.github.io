@@ -8,11 +8,17 @@
   <title>Khasmir - Personal Portfolio</title>
   <meta name="author" content="khasmirmb">
 
+  <!-- website Icon -->
+  <link rel="icon" type="image/x-icon" href="images/icon.png">
+
   <!-- Web Fonts -->
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
 
   <!-- Stylesheet -->
 
+  <!-- Slick -->
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css">
   <!-- Animate -->
   <link rel="stylesheet" type="text/css" href="vendor/animate/animate.min.css" />
   <!-- Bootstrap -->
@@ -47,9 +53,9 @@
          <img class="img-fluid rounded-sm d-block profile-small" src="images/profile.png" title="Hi, I'm Khasmir" alt="" style="filter: brightness(1.5);">
       </div>
       <div class="col-md-8 my-5">
-        <h2 class="profile-name text-white text-uppercase fw-600">HI There,</h2>
-        <h2 class="profile-name text-uppercase fw-600" style="color: #3bba9c;">I'M AL-KHASMIR BASALUDDIN</h2>
-        <h2 class="profile-name text-white text-uppercase mb-4">A WEB APPLICATION DEVELOPER AND DATABASE MANAGEMENT EXPERT</h2>
+        <h2 class="profile-description text-uppercase">HI There,</h2>
+        <h2 class="profile-fullname text-uppercase">I'M AL-KHASMIR BASALUDDIN</h2>
+        <h2 class="profile-description text-uppercase mb-4">A WEB APPLICATION DEVELOPER AND DATABASE MANAGEMENT EXPERT</h2>
         <p class="text-5 text-light pb-3">based in Zamboanga City, Philippines.</p>
         <a href="#about" class="btn btn-outline-secondary btn-lg text-white about-btn">About Me</a>
         <div class="social-media mt-5">
@@ -69,9 +75,8 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav mb-2 mb-lg-0">
@@ -114,11 +119,28 @@
           <h3 class="text-justify self-introduction">Hi, I'm <span class="span-name">AL-Khasmir</span></h3>
           <p class="lh-sm lead self-description">I'm a web application developer with a strong expertise in database management. I have a passion for creating efficient and user-friendly web applications. With my skills in web development and database management, I am able to design and implement robust solutions that meet the needs of modern businesses. I'm dedicated to continuously expanding my knowledge and staying up-to-date with the latest technologies in the field.</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 text-center">
           <div class="badge badge-primary years-of-experience-badge">3+</div>
           <p class="lead years-of-experience-text">Years of <span>Experience</span></p>
         </div>
-      </div>
+        <div class="project-stats">
+          <div class="project-card">
+            <h3 class="project-title">Total Projects</h3>
+            <p class="project-number">5</p>
+          </div>
+          <div class="project-card">
+            <h3 class="project-title">Ongoing Projects</h3>
+            <p class="project-number">2</p>
+          </div>
+          <div class="project-card">
+            <h3 class="project-title">Job Success</h3>
+            <p class="project-number">95%</p>
+          </div>
+        </div>
+        <div class="col-md-12 cta-button mt-3">
+          <button class="cv-button">Download CV</button>
+        </div>               
+      </div>              
     </div>
   </section>
 
@@ -146,7 +168,7 @@
           <p class="services-description lh-base text-muted">Unleash the potential of your data with my expertise in data analysis and visualization. Gain valuable insights and communicate complex information effectively through impactful visualizations and data-driven narratives.</p>
         </div>
       </div>
-      <section id="skills" class="skills-section mt-4">
+      <div id="skills" class="skills-section mt-4">
         <div class="container">
           <div class="skills-header text-center">
             <h2 class="section-title">My Skills</h2>
@@ -199,16 +221,18 @@
                 <span class="skill-percentage" id="db-percentage">100%</span>
               </div>
             </div>
+            <div class="col-md-12 cta-button mt-5">
+              <button class="cv-button"><a href="#contact">Hire Me!</a></button>
+            </div> 
           </div>
         </div>
-      </section>
+      </div>
     </div>
   </section>
-
   <!-- Resume section -->
   <section id="resume" class="section bg-light">
     <div class="container">
-      <div class="services-header text-center">
+      <div class="resume-header text-center">
         <span class="badge rounded-pill title-badge mb-2">Resume</span>
         <h2 class="fw-bold">My Resume</h2>
       </div>
@@ -349,21 +373,168 @@
   
 
   <!-- Clients section -->
-  <section id="clients" class="section">
+  <section id="clients" class="section" style="background-color: #2e3047;">
     <div class="container">
-      <h2>Clients</h2>
-      <p>Add your content here.</p>
+      <div class="client-header text-center">
+        <span class="badge rounded-pill title-badge mb-2">Client Testimonial</span>
+        <h2 class="fw-bold text-white">Testimonials from Satisfied Clients</h2>
+      </div>
+      <div class="quotes">
+        <div class="bubble">
+          <blockquote><div class="text-muted text-center">Working with Khasmir has been an absolute pleasure. Their attention to detail, creativity, and dedication to delivering exceptional results is truly commendable. I was impressed by their ability to understand my needs and translate them into a remarkable final product. I highly recommend Khasmir for anyone seeking a professional and talented individual.</div>
+            <div class="profile-circle rounded-circle d-flex align-items-center justify-content-center shadow text-center">
+              <img src="images/client1.jpg" alt="Client Image" class="profile-image rounded-circle img-fluid">
+              <div class="profile-overlay"></div>
+              <h3 class="profile-name">Hoshimachi Suisei</h3>
+            </div>                       
+       </blockquote>
+          <div class="bubble-arrow"></div>
+          <div class="row">
+            <cite>Hoshimachi Suisei</cite>
+            <p class="text-muted">Owner, Hoshiyomi</p>
+          </div>
+        </div>  
+        <div class="bubble">
+          <blockquote><div class="text-muted text-center">I had the privilege of collaborating with Khasmir on a challenging project, and I must say, their expertise and professionalism exceeded my expectations. They consistently went above and beyond to ensure our project's success, demonstrating remarkable problem-solving skills and a deep understanding of our industry. It's refreshing to work with someone as skilled and reliable as Khasmir.</div>
+            <div class="profile-circle rounded-circle d-flex align-items-center justify-content-center shadow text-center">
+              <img src="images/client2.jpg" alt="Client Image" class="profile-image rounded-circle img-fluid">
+              <div class="profile-overlay"></div>
+              <h3 class="profile-name">Momosuzu Nene</h3>
+            </div>                       
+       </blockquote>
+          <div class="bubble-arrow"></div>
+          <div class="row">
+            <cite>Momosuzu Nene</cite>
+            <p class="text-muted">Owner, Nekkos</p>
+          </div>
+        </div>
+        <div class="bubble">
+          <blockquote><div class="text-muted text-center">I can't speak highly enough of Khasmir's exceptional skills and expertise. Their ability to bring my vision to life was truly remarkable. From our initial consultation to the final product, Khasmir exhibited professionalism, creativity, and a genuine passion for their craft. They are a true asset to any project and I look forward to working with them again in the future.</div>
+            <div class="profile-circle rounded-circle d-flex align-items-center justify-content-center shadow text-center">
+              <img src="images/client3.jpg" alt="Client Image" class="profile-image rounded-circle img-fluid">
+              <div class="profile-overlay"></div>
+              <h3 class="profile-name">Usada Pekora</h3>
+            </div>                       
+       </blockquote>
+          <div class="bubble-arrow"></div>
+          <div class="row">
+            <cite>Usada Pekora</cite>
+            <p class="text-muted">Owner, Nousagi</p>
+          </div>
+        </div>
+        <div class="bubble">
+          <blockquote><div class="text-muted text-center">I had the pleasure of engaging Khasmir for a critical project, and I am extremely satisfied with the results. Their talent, dedication, and ability to meet tight deadlines were impressive. What sets Khasmir apart is their outstanding communication skills and their willingness to go the extra mile to ensure client satisfaction. I highly recommend Khasmir to anyone seeking top-notch professional services.</div>
+            <div class="profile-circle rounded-circle d-flex align-items-center justify-content-center shadow text-center">
+              <img src="images/client4.png" alt="Client Image" class="profile-image rounded-circle img-fluid">
+              <div class="profile-overlay"></div>
+              <h3 class="profile-name">Gawr Gura</h3>
+            </div>                       
+       </blockquote>
+          <div class="bubble-arrow"></div>
+          <div class="row">
+            <cite>Gawr Gura</cite>
+            <p class="text-muted">Owner, Chumbuds</p>
+          </div>
+        </div>
+        <div class="bubble">
+          <blockquote><div class="text-muted text-center">I consider myself fortunate to have had the opportunity to work with Khasmir. Their expertise and attention to detail were evident in every aspect of the project. Khasmir consistently demonstrated professionalism, creativity, and an unwavering commitment to delivering high-quality work. Their ability to understand my goals and translate them into exceptional results is a testament to their remarkable talent. I would not hesitate to recommend Khasmir to others.</div>
+            <div class="profile-circle rounded-circle d-flex align-items-center justify-content-center shadow text-center">
+              <img src="images/client5.jpg" alt="Client Image" class="profile-image rounded-circle img-fluid">
+              <div class="profile-overlay"></div>
+              <h3 class="profile-name">Kobo Kanaeru</h3>
+            </div>                       
+       </blockquote>
+          <div class="bubble-arrow"></div>
+          <div class="row">
+            <cite>Kobo Kanaeru</cite>
+            <p class="text-muted">Owner, Kobokerz</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-
+  
   <!-- Contact section -->
   <section id="contact" class="section">
     <div class="container">
-      <h2>Contact</h2>
-      <p>Add your content here.</p>
+      <div class="contact-header text-center">
+        <span class="badge rounded-pill title-badge mb-2">Contact Me</span>
+        <h2 class="fw-bold">Reach Out to Me</h2>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <h2 class="contact-title">Get in <span style="color: #707793;">Touch</span></h2>
+        </div>
+        <div class="col-lg-3 offset-lg-1">
+          <h4 class="fw-bold">Contact <span style="color: #707793;">Details</span></h4>
+        </div>
+        <div class="col-lg-8">
+          <form>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <textarea class="form-control w-100 rounded-0" name="message" id="message" cols="30" rows="9" placeholder="Enter Message"></textarea>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <input class="form-control rounded-0" name="name" id="name" type="text" placeholder="Enter your name">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <input class="form-control rounded-0" name="email" id="email" type="email" placeholder="Email">
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <input class="form-control rounded-0" name="subject" id="subject" type="text" placeholder="Enter Subject">
+                </div>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <button type="submit" class="button button-contactForm rounded-0">Send Message</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-3 offset-lg-1">
+          <div class="contact-info">
+            <div class="contact-info__item">
+              <i class="fas fa-map-marker-alt contact-info__icon"></i>
+              <div class="contact-info__details">
+                <h3>Location</h3>
+                <p>Sta Catalina CDCP Road</p>
+                <p>Zamboanga City, 7000</p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <i class="fas fa-phone contact-info__icon"></i>
+              <div class="contact-info__details">
+                <h3>Phone</h3>
+                <p>+1 253 565 2365</p>
+                <p>Mon to Fri 9am to 6pm</p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <i class="fas fa-envelope contact-info__icon"></i>
+              <div class="contact-info__details">
+                <h3>Email</h3>
+                <p>khasmirmb@gmail.com</p>
+                <p>Send us your query anytime!</p>
+              </div>
+            </div>
+            <div class="contact-info__social">
+              <a href="#" class="contact-info__social-link"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="contact-info__social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="contact-info__social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="contact-info__social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
-
+  
   <div class="image-popup">
     <div class="popup-content">
       <span class="close-button">&times;</span>
@@ -371,16 +542,22 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      &copy; 2023 Khasmir. All Rights Reserved.
+    <!-- Footer -->
+  <footer>
+    <!-- Copyright -->
+    <div class="text-center text-white py-5" style="background-color: #2e3047;">
+      2023 © Copyright:
+      <a href="#" style="color: #3bba9c; font-weight: bold;">Khasmir</a>
+      All Rights Reserved.
     </div>
   </footer>
 
+
   <!-- JavaScript --> 
   <script src="vendor/jquery/jquery.min.js"></script> 
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Slick --> 
+  <script src="vendor/slick/slick.min.js"></script>
   <!-- Easing --> 
   <script src="vendor/jquery.easing/jquery.easing.min.js"></script> 
   <!-- Appear --> 
