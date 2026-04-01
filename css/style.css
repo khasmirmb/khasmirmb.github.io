@@ -682,6 +682,51 @@ body {
 .about-cta-link i { transition: transform 0.3s ease; }
 .about-cta-link:hover i { transform: translateX(5px); }
 
+.about-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 15px 15px;
+}
+
+.about-pill-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: var(--dark);
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.about-pill-btn:hover {
+  background: var(--secondary);
+  color: var(--dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+}
+
+.about-pill-btn-outline {
+  background: transparent;
+  color: var(--dark);
+  border: 2px solid var(--dark);
+  box-shadow: none;
+}
+
+.about-pill-btn-outline:hover {
+  background: var(--dark);
+  color: #fff;
+  border-color: var(--dark);
+}
+
 @media (max-width: 575.98px) {
   .about-intro-row { flex-direction: column; text-align: center; }
 }
@@ -903,6 +948,57 @@ body.loaded #preloader {
 
 /* === Resume — ZZZ World/Background Card Style === */
 .resume-header { margin-bottom: 40px; }
+
+.cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  background: var(--dark);
+  border-radius: 50px;
+  padding: 4px;
+  padding-left: 0;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.cv-download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.cv-btn-accent { display: none; }
+
+.cv-btn-text {
+  color: #fff;
+  padding: 12px 24px;
+  font-weight: 800;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  background: transparent;
+}
+
+.cv-btn-text i { margin-right: 8px; }
+
+.cv-btn-arrow {
+  background: var(--secondary);
+  color: var(--dark);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.cv-download-btn:hover .cv-btn-arrow {
+  background: #d4bc6a;
+}
 
 .rsm-section-label {
   font-size: 0.8rem;
