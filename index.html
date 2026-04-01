@@ -5,293 +5,393 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-  <title>Khasmir - Personal Portfolio</title>
-  <meta name="author" content="khasmirmb">
+  <title>AL-Khasmir M. Basaluddin | Portfolio</title>
+  <meta name="author" content="AL-Khasmir M. Basaluddin">
+  <meta name="description" content="Software Developer based in Zamboanga City, Philippines. Specializing in web development, mobile apps, machine learning, and database management. View my portfolio and get in touch.">
+  <meta name="keywords" content="software developer, web developer, mobile developer, React, Laravel, Flutter, Zamboanga, Philippines, portfolio">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AL-Khasmir M. Basaluddin | Software Developer">
+  <meta property="og:description" content="Software Developer specializing in full-stack web & mobile development. View my projects and get in touch.">
+  <meta property="og:image" content="images/icon.png">
+  <meta property="og:url" content="https://khasmirmb.github.io">
+  <meta name="twitter:card" content="summary">
 
   <!-- Website Icon -->
   <link rel="icon" type="image/x-icon" href="images/icon.png">
 
   <!-- Web Fonts -->
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap' type='text/css'>
 
   <!-- Stylesheet -->
-
-  <!-- Slick -->
-  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
-  <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css">
-  <!-- Animate -->
-  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.min.css" />
-  <!-- Bootstrap -->
   <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
-  <!-- Font Awesome -->
   <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
-  <!-- Owl Carousel -->
-  <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.carousel.min.css" />
-  <!-- Magnific Popup -->
-  <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css" />
-  <!-- Custom Stylesheet -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 
 <body>
 
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Audio Element -->
+    <audio id="bgMusic" loop>
+      <source src="music/portfolio.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
     <!-- Preloader -->
     <div id="preloader">
+      <div class="loader-content">
+        <span class="loader-text">NOW LOADING</span>
+        <span class="loader-dots"></span>
+      </div>
     </div>
 
-
     <!-- Hero section -->
-    <section id="home" class="d-none d-md-block">
-       <div class="hero-wrap">
+    <section id="home">
+      <div class="hero-wrap">
         <div class="hero-mask"></div>
-        <div class="hero-bg" style="background-image:url('images/hero.jpg');"></div>
-      <div class="hero-content d-flex flex-column fullscreen py-5">
-			<div class="container my-auto">
-			<div class="row">
-			<div class="col-md-4">
-         <img class="img-fluid rounded-sm d-block profile-small" src="images/profile.png" title="Hi, I'm Khasmir" alt="" style="filter: brightness(1.5);">
-      </div>
-      <div class="col-md-8 my-5">
-        <h2 class="profile-description text-uppercase">HI There,</h2>
-        <h2 class="profile-fullname text-uppercase">I'M AL-KHASMIR BASALUDDIN</h2>
-        <h2 class="profile-description text-uppercase mb-4">A WEB APPLICATION DEVELOPER AND DATABASE MANAGEMENT EXPERT</h2>
-        <p class="text-5 text-light pb-3">based in Zamboanga City, Philippines.</p>
-        <a href="#about" class="btn btn-outline-secondary btn-lg text-white about-btn">About Me</a>
-        <div class="social-media mt-5">
-          <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <div class="hero-bg hero-gradient"></div>
+        <div class="hero-content d-flex flex-column fullscreen">
+          <div class="container my-auto">
+            <div class="row justify-content-center">
+              <div class="col-lg-10 text-center hero-text">
+                <p class="hero-greeting reveal">Hello, I'm</p>
+                <h1 class="hero-name reveal">AL-Khasmir M. Basaluddin</h1>
+                <h2 class="hero-title reveal">Software Developer</h2>
+                <div class="hero-title-wrapper reveal">
+                  <p class="hero-subtitle">I build things in</p>
+                  <h3 class="hero-typed-wrap"><span id="typed-output" class="typed-flip"></span></h3>
+                </div>
+                <p class="hero-location reveal"><i class="fas fa-map-marker-alt"></i> Zamboanga City, Philippines</p>
+                <div class="hero-buttons mt-4 reveal">
+                  <a href="#about" class="btn hero-btn-primary">About Me</a>
+                  <a href="#contact" class="btn hero-btn-outline">Get In Touch</a>
+                </div>
+                <div class="hero-social mt-5 reveal">
+                  <a href="https://www.facebook.com/KHZoldyck/" target="_blank" class="hero-social-link"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/xkhasy" target="_blank" class="hero-social-link"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/al-khasmir-basaluddin-59512730b/" target="_blank" class="hero-social-link"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://github.com/khasmirmb" target="_blank" class="hero-social-link"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container py-4 text-center">
+            <a href="#about" class="scroll-down-arrow"><i class="fas fa-chevron-down"></i></a>
+          </div>
         </div>
-			</div>
-			</div>
-			</div>
-			<div class="container py-2 text-center"><a href="#about" class="text-white smooth-scroll"><i class="fas fa-arrow-down"></i></a></div>
-		</div>
-	  </div>
+      </div>
     </section>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#home">K<span class="brand-dot">.</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#resume">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#clients">Clients</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link nav-cta" href="#contact">Contact</a></li>
+          <li class="nav-item ms-3"><button class="music-toggle" id="musicToggle" title="Toggle Music"><i class="fas fa-music"></i></button></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  
   <!-- About Me section -->
-  <section id="about" class="section bg-light">
+  <section id="about" class="section" data-section-num="01">
     <div class="container">
       <div class="text-center">
-        <span class="badge rounded-pill title-badge mb-2">About Me</span>
-        <h2 class="font-weight-bold about-heading">Know More About Me</h2>
+        <span class="title-badge">About Me</span>
+        <h2 class="section-heading about-heading">Know More About Me</h2>
       </div>
-      <div class="row justify-content-center align-items-center">
-        <div class="col-md-8">
-          <h3 class="text-justify self-introduction">Hi, I'm <span class="span-name">AL-Khasmir</span></h3>
-          <p class="lh-sm lead self-description">I'm a web application developer with a strong expertise in database management. I have a passion for creating efficient and user-friendly web applications. With my skills in web development and database management, I am able to design and implement robust solutions that meet the needs of modern businesses. I'm dedicated to continuously expanding my knowledge and staying up-to-date with the latest technologies in the field.</p>
-        </div>
-        <div class="col-md-4 text-center">
-          <div class="badge badge-primary years-of-experience-badge">3+</div>
-          <p class="lead years-of-experience-text">Years of <span>Experience</span></p>
-        </div>
-        <div class="container">
-          <div class="row project-stats">
-            <div class="col-sm-4">
-              <div class="project-card">
-                <h3 class="project-title-stats">Total Projects</h3>
-                <p class="project-number">5</p>
-              </div>
+      <div class="row justify-content-center align-items-start g-5">
+        <div class="col-lg-7 reveal-left">
+          <div class="about-intro-row">
+            <div class="about-photo-wrapper">
+              <img src="images/profile.png" alt="AL-Khasmir M. Basaluddin" class="about-photo" loading="lazy">
             </div>
-            <div class="col-sm-4">
-              <div class="project-card">
-                <h3 class="project-title-stats">Ongoing Projects</h3>
-                <p class="project-number">2</p>
-              </div>
+            <div class="about-intro-text">
+              <h3 class="self-introduction">Hi, I'm <span class="span-name">Al-Khasmir</span></h3>
+              <p class="about-role-badge"><i class="fas fa-code me-2"></i>Software Developer at Vintazk / Nexzys Intelligence</p>
             </div>
-            <div class="col-sm-4">
-              <div class="project-card">
-                <h3 class="project-title-stats">Job Success</h3>
-                <p class="project-number">95%</p>
+          </div>
+          <p class="self-description">A software developer with hands-on experience building full-stack applications, managing databases, and turning complex requirements into clean, maintainable code. I graduated with a <strong>BS in Computer Science</strong> from Western Mindanao State University and have been writing software professionally since.</p>
+          <p class="self-description">I specialize in developing scalable web and mobile solutions using modern frameworks like <strong>React, Laravel, Flutter, and Node.js</strong>. I thrive in collaborative environments and am committed to writing quality software that solves real-world problems.</p>
+
+          <div class="about-details">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="about-detail-item">
+                  <span class="about-detail-label">Name</span>
+                  <span class="about-detail-value">AL-Khasmir M. Basaluddin</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="about-detail-item">
+                  <span class="about-detail-label">Email</span>
+                  <span class="about-detail-value">khasmirmb@gmail.com</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="about-detail-item">
+                  <span class="about-detail-label">Location</span>
+                  <span class="about-detail-value">Zamboanga City, PH</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="about-detail-item">
+                  <span class="about-detail-label">Phone</span>
+                  <span class="about-detail-value">09563350760</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="about-detail-item">
+                  <span class="about-detail-label">Degree</span>
+                  <span class="about-detail-value">BS Computer Science</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="about-detail-item">
+                  <span class="about-detail-label">Availability</span>
+                  <span class="about-detail-value"><span class="status-dot"></span> Open for freelance</span>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
-        <div class="col-md-12 cta-button mt-3">
-          <button class="cv-button">Download CV</button>
-        </div>               
-      </div>              
+        <div class="col-lg-5 reveal-right">
+          <div class="about-right-panel">
+            <div class="about-stats-grid">
+              <div class="about-stat-card">
+                <p class="about-stat-number">2+</p>
+                <p class="about-stat-label">Years Experience</p>
+              </div>
+              <div class="about-stat-card">
+                <p class="about-stat-number">10</p>
+                <p class="about-stat-label">Total Projects</p>
+              </div>
+              <div class="about-stat-card">
+                <p class="about-stat-number">2</p>
+                <p class="about-stat-label">In Progress</p>
+              </div>
+              <div class="about-stat-card">
+                <p class="about-stat-number">8</p>
+                <p class="about-stat-label">Completed</p>
+              </div>
+            </div>
+
+            <div class="about-tech">
+              <h6 class="about-tech-title">Tech Stack</h6>
+              <div class="about-tech-tags">
+                <span class="about-tech-tag">JavaScript</span>
+                <span class="about-tech-tag">React</span>
+                <span class="about-tech-tag">Node.js</span>
+                <span class="about-tech-tag">PHP</span>
+                <span class="about-tech-tag">Laravel</span>
+                <span class="about-tech-tag">Flutter</span>
+                <span class="about-tech-tag">Python</span>
+                <span class="about-tech-tag">MySQL</span>
+                <span class="about-tech-tag">React Native</span>
+                <span class="about-tech-tag">Supabase</span>
+                <span class="about-tech-tag">SQLite</span>
+                <span class="about-tech-tag">Git</span>
+              </div>
+            </div>
+
+            <div class="about-tools">
+              <h6 class="about-tech-title">Tools I Use</h6>
+              <div class="about-tech-tags">
+                <span class="about-tech-tag">VS Code</span>
+                <span class="about-tech-tag">Android Studio</span>
+                <span class="about-tech-tag">GitHub</span>
+                <span class="about-tech-tag">Roblox Studio</span>
+                <span class="about-tech-tag">XAMPP</span>
+                <span class="about-tech-tag">Figma</span>
+              </div>
+            </div>
+
+            <a href="#contact" class="about-cta-link">
+              <span>Let's work together</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Services section -->
-  <section id="services" class="section">
+  <section id="services" class="section bg-light" data-section-num="02">
     <div class="container">
       <div class="services-header text-center">
-        <span class="badge rounded-pill title-badge mb-2">What I Do?</span>
-        <h1 class="fw-bold">My Offered Services</h1>
+        <span class="title-badge">What I Do</span>
+        <h2 class="section-heading">Services & Expertise</h2>
       </div>
-      <div class="row justify-content-center align-items-center text-center">
-        <div class="col-md-4 text-center">
-          <i class="display-5 fa-solid fa-database mb-3" style="color: #3c3f58;"></i>
-          <h5 class="fw-bold mt-2">Database Management</h5>
-          <p class="services-description lh-base text-muted">Maximize data efficiency with expert database management. Secure, organize, and access your valuable information seamlessly. Drive informed decisions and business growth with confidence.</p>
-        </div>
-        <div class="col-md-4 text-center">
-          <i class="display-5 fa-solid fa-code mb-3" style="color: #3c3f58;"></i>
-          <h5 class="fw-bold mt-2">Web and Mobile Development</h5>
-          <p class="services-description lh-base text-muted">Elevate your digital presence with my web and mobile development skills. Deliver seamless user experiences and drive audience engagement through innovative applications.</p>
-        </div>
-        <div class="col-md-4 text-center">
-          <i class="display-5 fa-solid fa-chart-pie mb-3" style="color: #3c3f58;"></i>
-          <h5 class="fw-bold mt-2">Data Analysis and Visualization</h5>
-          <p class="services-description lh-base text-muted">Unleash the potential of your data with my expertise in data analysis and visualization. Gain valuable insights and communicate complex information effectively through impactful visualizations and data-driven narratives.</p>
-        </div>
-      </div>
-      <div id="skills" class="skills-section mt-4">
-        <div class="container">
-          <div class="skills-header text-center">
-            <h2 class="section-title">My Skills</h2>
-            <div class="line"></div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="skill-item">
-                <h5 class="skill-name">HTML/CSS</h5>
-                <div class="progress">
-                  <div id="html-css-progress" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <span class="skill-percentage" id="html-css-percentage">100%</span>
-              </div>
-              <div class="skill-item">
-                <h5 class="skill-name">Javascript</h5>
-                <div class="progress">
-                  <div id="javascript-progress" class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <span class="skill-percentage" id="javascript-percentage">90%</span>
-              </div>
-              <div class="skill-item">
-                <h5 class="skill-name">PHP</h5>
-                <div class="progress">
-                  <div id="php-progress" class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <span class="skill-percentage" id="php-percentage">90%</span>
-              </div>
+      <div class="row g-4">
+        <div class="col-lg-6 reveal-up">
+          <div class="svc-card">
+            <div class="svc-card-accent">
+              <i class="fas fa-laptop-code svc-card-icon"></i>
+              <span class="svc-card-num">01</span>
             </div>
-            <div class="col-md-6">
-              <div class="skill-item">
-                <h5 class="skill-name">Machine Learning/Data Analytics</h5>
-                <div class="progress">
-                  <div id="ml-da-progress" class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <span class="skill-percentage" id="ml-da-percentage">85%</span>
-              </div>
-              <div class="skill-item">
-                <h5 class="skill-name">Design</h5>
-                <div class="progress">
-                  <div id="design-progress" class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <span class="skill-percentage" id="design-percentage">80%</span>
-              </div>
-              <div class="skill-item">
-                <h5 class="skill-name">Database</h5>
-                <div class="progress">
-                  <div id="db-progress" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <span class="skill-percentage" id="db-percentage">100%</span>
-              </div>
+            <div class="svc-card-body">
+              <h4 class="svc-card-title">Full-Stack Web Development</h4>
+              <p class="svc-card-desc">End-to-end web applications — from responsive front-end interfaces to robust back-end systems. Built WeCare, Tulong, TripWise, and AniZone.</p>
+              <div class="svc-card-tags"><span>React</span><span>Laravel</span><span>PHP</span><span>JavaScript</span></div>
             </div>
-            <div class="col-md-12 cta-button mt-5">
-              <button class="cv-button"><a href="#contact">Hire Me!</a></button>
-            </div> 
           </div>
         </div>
+        <div class="col-lg-6 reveal-up">
+          <div class="svc-card">
+            <div class="svc-card-accent">
+              <i class="fas fa-database svc-card-icon"></i>
+              <span class="svc-card-num">02</span>
+            </div>
+            <div class="svc-card-body">
+              <h4 class="svc-card-title">Database Design & Management</h4>
+              <p class="svc-card-desc">Designing efficient database architectures, writing optimized queries, and managing data integrity across booking, freelance, and business discovery systems.</p>
+              <div class="svc-card-tags"><span>MySQL</span><span>SQLite</span><span>Supabase</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal-up">
+          <div class="svc-card">
+            <div class="svc-card-accent">
+              <i class="fas fa-brain svc-card-icon"></i>
+              <span class="svc-card-num">03</span>
+            </div>
+            <div class="svc-card-body">
+              <h4 class="svc-card-title">Machine Learning & Analytics</h4>
+              <p class="svc-card-desc">Building predictive models and extracting actionable insights. Developed a Used Car Price Prediction system using machine learning algorithms.</p>
+              <div class="svc-card-tags"><span>Python</span><span>Scikit-learn</span><span>Data Analysis</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal-up">
+          <div class="svc-card">
+            <div class="svc-card-accent">
+              <i class="fas fa-mobile-alt svc-card-icon"></i>
+              <span class="svc-card-num">04</span>
+            </div>
+            <div class="svc-card-body">
+              <h4 class="svc-card-title">Mobile & UI Development</h4>
+              <p class="svc-card-desc">Cross-platform mobile apps for Android and iOS. Developed ZamGo — a local business discovery app with QR code redemption and location-based search.</p>
+              <div class="svc-card-tags"><span>Flutter</span><span>React Native</span><span>Dart</span><span>UI/UX</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal-up">
+          <div class="svc-card">
+            <div class="svc-card-accent">
+              <i class="fas fa-server svc-card-icon"></i>
+              <span class="svc-card-num">05</span>
+            </div>
+            <div class="svc-card-body">
+              <h4 class="svc-card-title">Backend & API Development</h4>
+              <p class="svc-card-desc">Secure server-side logic, RESTful APIs, and authentication systems. Built backends for user management, event booking, and attendance tracking.</p>
+              <div class="svc-card-tags"><span>Node.js</span><span>Laravel</span><span>REST API</span><span>Express</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal-up">
+          <div class="svc-card">
+            <div class="svc-card-accent">
+              <i class="fas fa-bug svc-card-icon"></i>
+              <span class="svc-card-num">06</span>
+            </div>
+            <div class="svc-card-body">
+              <h4 class="svc-card-title">Testing & Debugging</h4>
+              <p class="svc-card-desc">Systematic debugging and quality assurance. With prior experience as a Game Debugger, I bring a meticulous eye for detail to every project.</p>
+              <div class="svc-card-tags"><span>QA Testing</span><span>Debugging</span><span>Code Review</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="#contact" class="btn hire-me-btn">
+          <span>Hire Me</span>
+          <i class="fas fa-arrow-right ms-2"></i>
+        </a>
       </div>
     </div>
   </section>
+
   <!-- Resume section -->
-  <section id="resume" class="section bg-light">
+  <section id="resume" class="section" data-section-num="03">
     <div class="container">
       <div class="resume-header text-center">
-        <span class="badge rounded-pill title-badge mb-2">Resume</span>
-        <h2 class="fw-bold">My Resume</h2>
+        <span class="title-badge">Resume</span>
+        <h2 class="section-heading">My Resume</h2>
       </div>
-      <div class="row">
-        <div class="col-lg-6">
-          <h4 class="resume-heading">Education</h4>
-          <div class="resume-card">
-            <div class="resume-card-header">
-              <h4 class="resume-title">Bachelor of Science in Computer Science</h4>
-              <h5 class="resume-subtitle">Western Mindanao State University</h5>
-            </div>
-            <div class="resume-card-body">
-              <p class="resume-date">2020 - Present</p>
-              <p class="resume-description">Obtained a Bachelor of Science in Computer Science from Western Mindanao State University. Proficient in programming, algorithms, and database management. Passionate about web and mobile application development.</p>
-            </div>
-          </div>
-  
-          <div class="resume-card">
-            <div class="resume-card-header">
-              <h4 class="resume-title">Diploma in Web Development</h4>
-              <h5 class="resume-subtitle">Online Course</h5>
-            </div>
-            <div class="resume-card-body">
-              <p class="resume-date">2021 - 2022</p>
-              <p class="resume-description">Completed online courses in web development, gaining expertise in HTML, CSS, and JavaScript. Skilled in building responsive and user-friendly websites. Continuously expanding knowledge in the latest web development technologies.</p>
-            </div>
+      <h4 class="rsm-section-label reveal-up"><i class="fas fa-graduation-cap"></i> Education</h4>
+      <div class="rsm-cards rsm-cards-2 reveal-up">
+        <div class="rsm-card">
+          <div class="rsm-card-inner">
+            <i class="fas fa-graduation-cap rsm-card-bg-icon"></i>
+            <span class="rsm-card-type">Education</span>
+            <h3 class="rsm-card-title">BS Computer Science</h3>
+            <p class="rsm-card-place">Western Mindanao State University</p>
+            <p class="rsm-card-desc">Strong foundation in programming, algorithms, data structures, and database management. Built full-stack web apps and ML projects.</p>
+            <span class="rsm-card-date">2020 — 2024</span>
           </div>
         </div>
-  
-        <div class="col-lg-6">
-          <h4 class="resume-heading">Experience</h3>
-          <div class="resume-card">
-            <div class="resume-card-header">
-              <h4 class="resume-title">Game Debugger</h4>
-              <h5 class="resume-subtitle">Comapny</h5>
-            </div>
-            <div class="resume-card-body">
-              <p class="resume-date">2018 - 2020</p>
-              <p class="resume-description">Worked as a Game Debugger at Company, ensuring the smooth functioning of game mechanics and identifying and fixing bugs. Collaborated with developers and designers to enhance game performance and user experience. Proficient in debugging tools and techniques, with a strong attention to detail.</p>
-            </div>
+        <div class="rsm-card">
+          <div class="rsm-card-inner">
+            <i class="fas fa-school rsm-card-bg-icon"></i>
+            <span class="rsm-card-type">Education</span>
+            <h3 class="rsm-card-title">Senior High — ITMAWE</h3>
+            <p class="rsm-card-place">STI College Zamboanga</p>
+            <p class="rsm-card-desc">IT in Mobile App and Web Development strand. Early foundation in programming, web technologies, and application development.</p>
+            <span class="rsm-card-date">2018 — 2020</span>
           </div>
-  
-          <div class="resume-card">
-            <div class="resume-card-header">
-              <h4 class="resume-title">Intern</h4>
-              <h5 class="resume-subtitle">XYZ Corporation</h5>
-            </div>
-            <div class="resume-card-body">
-              <p class="resume-date">2021 - 2022</p>
-              <p class="resume-description">Interned at XYZ Corporation, gaining practical software development experience. Assisted with coding, testing, and debugging. Developed programming proficiency and problem-solving skills.</p>
-            </div>
+        </div>
+      </div>
+
+      <h4 class="rsm-section-label reveal-up"><i class="fas fa-briefcase"></i> Experience</h4>
+      <div class="rsm-cards rsm-cards-3 reveal-up">
+        <div class="rsm-card rsm-card-featured">
+          <div class="rsm-card-inner">
+            <i class="fas fa-code rsm-card-bg-icon"></i>
+            <span class="rsm-card-type">Experience</span>
+            <h3 class="rsm-card-title">Software Developer</h3>
+            <p class="rsm-card-place">Vintazk / Nexzys Intelligence</p>
+            <p class="rsm-card-desc">Building full-stack web applications, collaborating on system architecture, and contributing to product features using modern frameworks and technologies.</p>
+            <span class="rsm-card-date rsm-card-date-active">2025 — Present</span>
+          </div>
+        </div>
+        <div class="rsm-card">
+          <div class="rsm-card-inner">
+            <i class="fas fa-laptop-house rsm-card-bg-icon"></i>
+            <span class="rsm-card-type">Experience</span>
+            <h3 class="rsm-card-title">Freelance Developer</h3>
+            <p class="rsm-card-place">Self-Employed</p>
+            <p class="rsm-card-desc">Took on freelance web and mobile development projects after graduation. Built custom solutions for clients using modern frameworks and technologies.</p>
+            <span class="rsm-card-date">2024 — 2025 · 8 months</span>
+          </div>
+        </div>
+        <div class="rsm-card">
+          <div class="rsm-card-inner">
+            <i class="fas fa-boxes rsm-card-bg-icon"></i>
+            <span class="rsm-card-type">Experience</span>
+            <h3 class="rsm-card-title">Inventory Staff</h3>
+            <p class="rsm-card-place">FC Floor Center</p>
+            <p class="rsm-card-desc">Managed inventory tracking and data organization. Systematic record-keeping, stock management, and operational workflows.</p>
+            <span class="rsm-card-date">2025 · 2 months</span>
           </div>
         </div>
       </div>
@@ -299,303 +399,211 @@
   </section>
 
   <!-- Projects section -->
-  <section id="projects" class="section">
+  <section id="projects" class="section bg-light" data-section-num="04">
     <div class="container">
       <div class="projects-header text-center mb-5">
-        <span class="badge rounded-pill title-badge mb-2">Portfolio</span>
-        <h2 class="fw-bold">My Recent Works</h2>
+        <span class="title-badge">Portfolio</span>
+        <h2 class="section-heading">My Recent Works</h2>
       </div>
-      <div class="row">
-  
-        <!-- Large Project -->
-        <div class="col-lg-8">
-          <div class="project-card large-card">
-            <div class="project-image">
-              <img src="images/project1.png" alt="Project 1" class="img-fluid">
-              <div class="overlay"></div>
-              <div class="project-info">
-                <h3 class="project-title">WeCare Nursing Home</h3>
-                <p class="project-description">Elderly Website: Empowering seniors with user-friendly digital tools for enhanced connectivity, information access, and online services.</p>
-              </div>
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6 reveal-up">
+          <div class="proj-card">
+            <div class="proj-card-top">
+              <div class="proj-icon"><i class="fas fa-heartbeat"></i></div>
+              <span class="proj-type">Web App</span>
             </div>
-          </div>
-        </div>
-  
-        <!-- Medium Project -->
-        <div class="col-lg-4">
-          <div class="project-card medium-card">
-            <div class="project-image">
-              <img src="images/project2.png" alt="Project 2" class="img-fluid">
-              <div class="overlay"></div>
-              <div class="project-info">
-                <h3 class="project-title">Used Car Prediction</h3>
-                <p class="project-description">Helping buyers make informed decisions by providing accurate predictions and insights on used car values, condition, and performance.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Small Projects -->
-        <div class="col-lg-4">
-          <div class="project-card medium-card">
-            <div class="project-image">
-              <img src="images/project3.png" alt="Project 3" class="img-fluid">
-              <div class="overlay"></div>
-              <div class="project-info">
-                <h3 class="project-title">Jeshin.Co</h3>
-                <p class="project-description">A sleek online attendance system, Jeshin.Co simplifies tracking attendance for various purposes.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-lg-4">
-          <div class="project-card medium-card">
-            <div class="project-image">
-              <img src="images/project4.png" alt="Project 4" class="img-fluid">
-              <div class="overlay"></div>
-              <div class="project-info">
-                <h3 class="project-title">Tulong</h3>
-                <p class="project-description">Your go-to platform for online freelance services, connecting clients with skilled professionals for a seamless and efficient work collaboration.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="col-lg-4">
-          <div class="project-card medium-card">
-            <div class="project-image">
-              <img src="images/project5.png" alt="Project 5" class="img-fluid">
-              <div class="overlay"></div>
-              <div class="project-info">
-                <h3 class="project-title">TicketEase</h3>
-                <p class="project-description">Your one-stop online platform for hassle-free ticketing and event management. Easily book, manage, and organize events with our user-friendly website.</p>
-              </div>
+            <h4 class="proj-name">WeCare Nursing Home</h4>
+            <p class="proj-desc">A full-stack elderly care platform with appointment scheduling, service history, and user authentication for nursing home management.</p>
+            <div class="proj-tags">
+              <span>PHP</span><span>MySQL</span><span>Bootstrap</span><span>JavaScript</span>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-12">
-          <div class="project-card large-card">
-            <div class="project-image">
-              <img src="images/project6.png" alt="Project 1" class="img-fluid">
-              <div class="overlay"></div>
-              <div class="project-info">
-                <h3 class="project-title">AniZone</h3>
-                <p class="project-description">Your go-to anime voting site for rating and ranking your favorite shows. Join the vibrant community, cast your votes, and stay connected with the latest trends in the anime world.</p>
-              </div>
+        <div class="col-lg-4 col-md-6 reveal-up">
+          <div class="proj-card">
+            <div class="proj-card-top">
+              <div class="proj-icon"><i class="fas fa-car"></i></div>
+              <span class="proj-type">Machine Learning</span>
+            </div>
+            <h4 class="proj-name">Used Car Prediction</h4>
+            <p class="proj-desc">A predictive model that estimates used car market values using machine learning algorithms, helping buyers make data-driven purchasing decisions.</p>
+            <div class="proj-tags">
+              <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>Data Analysis</span>
             </div>
           </div>
         </div>
-  
-      </div>
-    </div>
-  </section>
-  
 
-  <!-- Clients section -->
-  <section id="clients" class="section" style="background-color: #2e3047;">
-    <div class="container">
-      <div class="client-header text-center">
-        <span class="badge rounded-pill title-badge mb-2">Client Testimonial</span>
-        <h2 class="fw-bold text-white">Testimonials from Satisfied Clients</h2>
-      </div>
-      <div class="quotes">
-        <div class="bubble">
-          <blockquote><div class="text-muted text-center">Working with Khasmir has been an absolute pleasure. Their attention to detail, creativity, and dedication to delivering exceptional results is truly commendable. I was impressed by their ability to understand my needs and translate them into a remarkable final product. I highly recommend Khasmir for anyone seeking a professional and talented individual.</div>
-            <div class="profile-circle rounded-circle d-flex align-items-center justify-content-center shadow text-center">
-              <img src="images/client1.jpg" alt="Client Image" class="profile-image rounded-circle img-fluid">
-              <div class="profile-overlay"></div>
-              <h3 class="profile-name">Hoshimachi Suisei</h3>
-            </div>                       
-       </blockquote>
-          <div class="bubble-arrow"></div>
-          <div class="row">
-            <cite>Hoshimachi Suisei</cite>
-            <p class="text-muted">Owner, Hoshiyomi</p>
-          </div>
-        </div>  
-        <div class="bubble">
-          <blockquote><div class="text-muted text-center">I had the privilege of collaborating with Khasmir on a challenging project, and I must say, their expertise and professionalism exceeded my expectations. They consistently went above and beyond to ensure our project's success, demonstrating remarkable problem-solving skills and a deep understanding of our industry. It's refreshing to work with someone as skilled and reliable as Khasmir.</div>
-            <div class="profile-circle rounded-circle d-flex align-items-center justify-content-center shadow text-center">
-              <img src="images/client2.jpg" alt="Client Image" class="profile-image rounded-circle img-fluid">
-              <div class="profile-overlay"></div>
-              <h3 class="profile-name">Momosuzu Nene</h3>
-            </div>                       
-       </blockquote>
-          <div class="bubble-arrow"></div>
-          <div class="row">
-            <cite>Momosuzu Nene</cite>
-            <p class="text-muted">Owner, Nekkos</p>
+        <div class="col-lg-4 col-md-6 reveal-up">
+          <div class="proj-card proj-card-active">
+            <div class="proj-card-top">
+              <div class="proj-icon"><i class="fas fa-store"></i></div>
+              <div class="d-flex align-items-center gap-2">
+                <span class="proj-status">In Development</span>
+                <span class="proj-type">Cross-Platform</span>
+              </div>
+            </div>
+            <h4 class="proj-name">ZamGo</h4>
+            <p class="proj-desc">A local business discovery app for Zamboanga City — featuring a business directory, location-based search, exclusive deals with QR code redemption, reviews, and a barter trade marketplace.</p>
+            <div class="proj-tags">
+              <span>React Native</span><span>JavaScript</span><span>Supabase</span><span>REST API</span>
+            </div>
           </div>
         </div>
-        <div class="bubble">
-          <blockquote><div class="text-muted text-center">I can't speak highly enough of Khasmir's exceptional skills and expertise. Their ability to bring my vision to life was truly remarkable. From our initial consultation to the final product, Khasmir exhibited professionalism, creativity, and a genuine passion for their craft. They are a true asset to any project and I look forward to working with them again in the future.</div>
-            <div class="profile-circle rounded-circle d-flex align-items-center justify-content-center shadow text-center">
-              <img src="images/client3.jpg" alt="Client Image" class="profile-image rounded-circle img-fluid">
-              <div class="profile-overlay"></div>
-              <h3 class="profile-name">Usada Pekora</h3>
-            </div>                       
-       </blockquote>
-          <div class="bubble-arrow"></div>
-          <div class="row">
-            <cite>Usada Pekora</cite>
-            <p class="text-muted">Owner, Nousagi</p>
+
+        <div class="col-lg-4 col-md-6 reveal-up">
+          <div class="proj-card">
+            <div class="proj-card-top">
+              <div class="proj-icon"><i class="fas fa-handshake"></i></div>
+              <span class="proj-type">Mobile App</span>
+            </div>
+            <h4 class="proj-name">Tulong</h4>
+            <p class="proj-desc">A freelance services marketplace connecting clients with skilled professionals, featuring job posting, bidding, and secure collaboration tools.</p>
+            <div class="proj-tags">
+              <span>Python</span><span>Flask</span><span>MySQL</span><span>Bootstrap</span>
+            </div>
           </div>
         </div>
-        <div class="bubble">
-          <blockquote><div class="text-muted text-center">I had the pleasure of engaging Khasmir for a critical project, and I am extremely satisfied with the results. Their talent, dedication, and ability to meet tight deadlines were impressive. What sets Khasmir apart is their outstanding communication skills and their willingness to go the extra mile to ensure client satisfaction. I highly recommend Khasmir to anyone seeking top-notch professional services.</div>
-            <div class="profile-circle rounded-circle d-flex align-items-center justify-content-center shadow text-center">
-              <img src="images/client4.png" alt="Client Image" class="profile-image rounded-circle img-fluid">
-              <div class="profile-overlay"></div>
-              <h3 class="profile-name">Gawr Gura</h3>
-            </div>                       
-       </blockquote>
-          <div class="bubble-arrow"></div>
-          <div class="row">
-            <cite>Gawr Gura</cite>
-            <p class="text-muted">Owner, Chumbuds</p>
+
+        <div class="col-lg-4 col-md-6 reveal-up">
+          <div class="proj-card">
+            <div class="proj-card-top">
+              <div class="proj-icon"><i class="fas fa-ship"></i></div>
+              <span class="proj-type">Web App</span>
+            </div>
+            <h4 class="proj-name">TripWise</h4>
+            <p class="proj-desc">A shipping line booking platform for sea travel, allowing passengers to search routes, book tickets, and manage reservations — similar to Cebu Pacific but for ships.</p>
+            <div class="proj-tags">
+              <span>Laravel</span><span>MySQL</span><span>JavaScript</span><span>Bootstrap</span>
+            </div>
           </div>
         </div>
-        <div class="bubble">
-          <blockquote><div class="text-muted text-center">I consider myself fortunate to have had the opportunity to work with Khasmir. Their expertise and attention to detail were evident in every aspect of the project. Khasmir consistently demonstrated professionalism, creativity, and an unwavering commitment to delivering high-quality work. Their ability to understand my goals and translate them into exceptional results is a testament to their remarkable talent. I would not hesitate to recommend Khasmir to others.</div>
-            <div class="profile-circle rounded-circle d-flex align-items-center justify-content-center shadow text-center">
-              <img src="images/client5.jpg" alt="Client Image" class="profile-image rounded-circle img-fluid">
-              <div class="profile-overlay"></div>
-              <h3 class="profile-name">Kobo Kanaeru</h3>
-            </div>                       
-       </blockquote>
-          <div class="bubble-arrow"></div>
-          <div class="row">
-            <cite>Kobo Kanaeru</cite>
-            <p class="text-muted">Owner, Kobokerz</p>
+
+        <div class="col-lg-4 col-md-6 reveal-up">
+          <div class="proj-card">
+            <div class="proj-card-top">
+              <div class="proj-icon"><i class="fas fa-poll"></i></div>
+              <span class="proj-type">Web App</span>
+            </div>
+            <h4 class="proj-name">AniZone</h4>
+            <p class="proj-desc">A community-driven anime voting and ranking site where users rate shows, track trends, and engage with fellow fans in real time.</p>
+            <div class="proj-tags">
+              <span>Laravel</span><span>MySQL</span><span>JavaScript</span><span>REST API</span>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
-  
+
   <!-- Contact section -->
-  <section id="contact" class="section">
+  <section id="contact" class="section" data-section-num="05">
     <div class="container">
-      <div class="contact-header text-center">
-        <span class="badge rounded-pill title-badge mb-2">Contact Me</span>
-        <h2 class="fw-bold">Reach Out to Me</h2>
-      </div>
-      <div class="row">
-        <div class="col-lg-8">
-          <form>
-            <div class="row">
-              <h2 class="contact-title">Get in <span style="color: #707793;">Touch</span></h2>
-              <div class="col-12">
-                <div class="form-group">
-                  <textarea class="form-control w-100 rounded-0" name="message" id="message" cols="30" rows="9" placeholder="Enter Message"></textarea>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <input class="form-control rounded-0" name="name" id="name" type="text" placeholder="Enter your name">
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <input class="form-control rounded-0" name="email" id="email" type="email" placeholder="Email">
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="form-group">
-                  <input class="form-control rounded-0" name="subject" id="subject" type="text" placeholder="Enter Subject">
-                </div>
-              </div>
+      <div class="contact-split reveal-up">
+        <!-- Left: Dark info panel -->
+        <div class="contact-dark-panel">
+          <span class="contact-dark-label">Contact</span>
+          <h2 class="contact-dark-heading">Let's Build<br>Something<br><span>Together.</span></h2>
+          <div class="contact-dark-info">
+            <div class="contact-dark-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Zamboanga City, Philippines</span>
             </div>
-            <div class="form-group mt-3">
-              <button type="submit" class="button button-contactForm rounded-0">Send Message</button>
+            <div class="contact-dark-item">
+              <i class="fas fa-phone"></i>
+              <span>09563350760</span>
+            </div>
+            <div class="contact-dark-item">
+              <i class="fas fa-envelope"></i>
+              <span>khasmirmb@gmail.com</span>
+            </div>
+          </div>
+          <div class="contact-dark-socials">
+            <a href="https://www.facebook.com/KHZoldyck/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/xkhasy" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/al-khasmir-basaluddin-59512730b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/khasmirmb" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <!-- Right: Form -->
+        <div class="contact-form-panel">
+          <h3 class="contact-form-heading">Send a Message</h3>
+          <form action="https://formspree.io/khasmirmb@gmail.com" method="POST" id="contactForm">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <input class="form-control contact-input" name="name" id="name" type="text" placeholder="Your Name" required>
+              </div>
+              <div class="col-sm-6">
+                <input class="form-control contact-input" name="email" id="email" type="email" placeholder="Your Email" required>
+              </div>
+              <div class="col-12">
+                <input class="form-control contact-input" name="subject" id="subject" type="text" placeholder="Subject">
+              </div>
+              <div class="col-12">
+                <textarea class="form-control contact-input" name="message" id="message" rows="5" placeholder="Your Message..." required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn hire-me-btn w-100" id="submitBtn">
+                  <span>Send Message</span>
+                  <i class="fas fa-arrow-right ms-2"></i>
+                </button>
+                <div id="formStatus" class="form-status mt-3"></div>
+              </div>
             </div>
           </form>
         </div>
-        <div class="col-lg-3 offset-lg-1">
-          <h4 class="fw-bold">Contact <span style="color: #707793;">Details</span></h4>
-          <div class="contact-info">
-            <div class="contact-info__item">
-              <i class="fas fa-map-marker-alt contact-info__icon"></i>
-              <div class="contact-info__details">
-                <h3>Location</h3>
-                <p>Sta Catalina CDCP Road</p>
-                <p>Zamboanga City, 7000</p>
-              </div>
-            </div>
-            <div class="contact-info__item">
-              <i class="fas fa-phone contact-info__icon"></i>
-              <div class="contact-info__details">
-                <h3>Phone</h3>
-                <p>+1 253 565 2365</p>
-                <p>Mon to Fri 9am to 6pm</p>
-              </div>
-            </div>
-            <div class="contact-info__item">
-              <i class="fas fa-envelope contact-info__icon"></i>
-              <div class="contact-info__details">
-                <h3>Email</h3>
-                <p>khasmirmb@gmail.com</p>
-                <p>Send us your query anytime!</p>
-              </div>
-            </div>
-            <div class="contact-info__social">
-              <a href="#" class="contact-info__social-link"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="contact-info__social-link"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="contact-info__social-link"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="contact-info__social-link"><i class="fab fa-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
-  
-  <div class="image-popup">
-    <div class="popup-content">
-      <span class="close-button">&times;</span>
-      <img class="popup-image" src="" alt="Project Image">
-    </div>
+
+  <!-- Side Section Navigator -->
+  <div class="side-nav" id="sideNav">
+    <span class="side-nav-adjacent" id="sideNavPrev">00</span>
+    <button class="side-nav-arrow" id="sideNavUp"><i class="fas fa-chevron-up"></i></button>
+    <span class="side-nav-num" id="sideNavNum">01</span>
+    <button class="side-nav-arrow" id="sideNavDown"><i class="fas fa-chevron-down"></i></button>
+    <span class="side-nav-adjacent" id="sideNavNext">02</span>
   </div>
 
-    <!-- Footer -->
-  <footer>
-    <!-- Copyright -->
-    <div class="text-center text-white py-5" style="background-color: #2e3047;">
-      2023 © Copyright:
-      <a href="#" style="color: #3bba9c; font-weight: bold;">Khasmir</a>
-      All Rights Reserved.
+  <!-- Back to Top -->
+  <a href="#home" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+  <!-- Footer -->
+  <footer style="background-color: #1a1a1a;">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+          <a href="#home" class="footer-brand">K<span>.</span></a>
+          <p class="footer-tagline">Building software that solves real-world problems.</p>
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <div class="footer-nav">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="col-md-4 text-center text-md-end">
+          <div class="footer-social">
+            <a href="https://www.facebook.com/KHZoldyck/" target="_blank" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/xkhasy" target="_blank" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/al-khasmir-basaluddin-59512730b/" target="_blank" class="footer-social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/khasmirmb" target="_blank" class="footer-social-link"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr style="border-color: rgba(255,255,255,0.1); margin: 20px 0;">
+      <p class="text-center mb-0" style="font-size: 0.85rem; color: rgba(255,255,255,0.4);">
+        <span id="footerYear"></span> &copy; AL-Khasmir M. Basaluddin. All Rights Reserved.
+      </p>
     </div>
   </footer>
 
-
-  <!-- JavaScript --> 
-  <script src="vendor/jquery/jquery.min.js"></script> 
+  <!-- JavaScript -->
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Slick --> 
-  <script src="vendor/slick/slick.min.js"></script>
-  <!-- Easing --> 
-  <script src="vendor/jquery.easing/jquery.easing.min.js"></script> 
-  <!-- Appear --> 
-  <script src="vendor/jquery.appear/jquery.appear.min.js"></script> 
-  <!-- WOW animation --> 
-  <script src="vendor/wow/wow.min.js"></script>
-  <!-- Images Loaded --> 
-  <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script> 
-  <!-- Typed --> 
-  <script src="vendor/typed/typed.min.js"></script> 
-  <!-- Parallax Bg --> 
-  <script src="vendor/parallaxie/parallaxie.min.js"></script> 
-  <!-- Owl Carousel --> 
-  <script src="vendor/owl.carousel/owl.carousel.min.js"></script> 
-  <!-- isotope Portfolio Filter --> 
-  <script src="vendor/isotope/isotope.pkgd.min.js"></script> 
-  <!-- Magnific Popup --> 
-  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/3a762edbf5.js" crossorigin="anonymous"></script>
-  <!-- Custom Script --> 
   <script src="js/theme.js"></script>
 
 </body>
