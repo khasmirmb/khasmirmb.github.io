@@ -3,44 +3,30 @@ window.addEventListener("load", function () {
   document.body.classList.add("loaded");
 });
 
-// Custom cursor
-document.addEventListener("DOMContentLoaded", function () {
-  var dot = document.getElementById("cursorDot");
-  var ring = document.getElementById("cursorRing");
-  if (!dot || !ring) return;
-
-  var mouseX = 0, mouseY = 0;
-  var ringX = 0, ringY = 0;
-
-  document.addEventListener("mousemove", function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.left = mouseX - 4 + "px";
-    dot.style.top = mouseY - 4 + "px";
-  });
-
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.15;
-    ringY += (mouseY - ringY) * 0.15;
-    ring.style.left = ringX + "px";
-    ring.style.top = ringY + "px";
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
-
-  // Hover effect on interactive elements
-  var hoverables = document.querySelectorAll("a, button, input, textarea, .proj-card, .svc-card, .rsm-card");
-  hoverables.forEach(function (el) {
-    el.addEventListener("mouseenter", function () {
-      ring.classList.add("hover");
-      dot.style.transform = "scale(2)";
-    });
-    el.addEventListener("mouseleave", function () {
-      ring.classList.remove("hover");
-      dot.style.transform = "scale(1)";
-    });
+// Parallax effect on section number watermarks
+window.addEventListener("scroll", function () {
+  var sections = document.querySelectorAll("section[data-section-num]");
+  var scrollY = window.scrollY;
+  sections.forEach(function (sec) {
+    var top = sec.offsetTop;
+    var offset = (scrollY - top) * 0.08;
+    sec.style.setProperty("--parallax-y", offset + "px");
   });
 });
+
+// Blur-up profile image
+document.addEventListener("DOMContentLoaded", function () {
+  var img = document.querySelector(".about-photo");
+  if (!img) return;
+  if (img.complete) {
+    img.classList.add("loaded");
+  } else {
+    img.addEventListener("load", function () {
+      img.classList.add("loaded");
+    });
+  }
+});
+
 
 
 // Word flip animation
@@ -212,59 +198,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Scroll reveal animations
+// Scroll reveal animations using IntersectionObserver
 document.addEventListener("DOMContentLoaded", function () {
-  var reveals = document.querySelectorAll(".reveal, .reveal-up, .reveal-left, .reveal-right");
+  var reveals = document.querySelectorAll(".reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-zoom, .reveal-flip, .reveal-blur, .reveal-curtain");
 
-  function checkReveal() {
-    var windowHeight = window.innerHeight;
-    reveals.forEach(function (el) {
-      var top = el.getBoundingClientRect().top;
-      if (top < windowHeight - 80) {
-        el.classList.add("active");
-      }
-    });
+  if ("IntersectionObserver" in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+
+    reveals.forEach(function (el) { observer.observe(el); });
+  } else {
+    // Fallback for older browsers
+    reveals.forEach(function (el) { el.classList.add("active"); });
   }
-
-  window.addEventListener("scroll", checkReveal);
-  checkReveal();
 });
 
-// Contact form handling
-document.addEventListener("DOMContentLoaded", function () {
-  var form = document.getElementById("contactForm");
-  var status = document.getElementById("formStatus");
-  var btn = document.getElementById("submitBtn");
-  if (!form) return;
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
-
-    var data = new FormData(form);
-
-    fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: { "Accept": "application/json" }
-    }).then(function (res) {
-      if (res.ok) {
-        status.className = "form-status success";
-        status.textContent = "Message sent successfully! I'll get back to you soon.";
-        form.reset();
-      } else {
-        status.className = "form-status error";
-        status.textContent = "Something went wrong. Please try emailing me directly.";
-      }
-      btn.disabled = false;
-      btn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
-    }).catch(function () {
-      btn.disabled = false;
-      btn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send Message';
-    });
-  });
-});
 
 // Music toggle functionality
 document.addEventListener("DOMContentLoaded", function () {
@@ -273,42 +227,39 @@ document.addEventListener("DOMContentLoaded", function () {
   
   if (!musicToggle || !bgMusic) return;
 
-  // Check if user has set a preference in localStorage
-  var hasUserPreference = localStorage.getItem("musicPlaying") !== null;
-  var isMusicPlaying = hasUserPreference 
-    ? localStorage.getItem("musicPlaying") === "true" 
-    : true; // Default to true (autoplay) for new visitors
-  
-  // Set initial state
-  if (isMusicPlaying) {
-    musicToggle.classList.add("active");
-    // Attempt to autoplay music
-    bgMusic.play().catch(function() {
-      // Autoplay might be blocked by browser policy
-      // Music will play on first user interaction
-    });
+  // Always show toggle as active by default
+  musicToggle.classList.add("active");
+
+  // Try to autoplay immediately
+  bgMusic.play().catch(function() {
+    // Browser blocked autoplay — start on first user interaction
+  });
+
+  // Start music on ANY first interaction if not already playing
+  function startMusicOnInteraction() {
+    if (bgMusic.paused && localStorage.getItem("musicPlaying") !== "false") {
+      bgMusic.play().catch(function() {});
+    }
+    document.removeEventListener("click", startMusicOnInteraction);
+    document.removeEventListener("scroll", startMusicOnInteraction);
+    document.removeEventListener("keydown", startMusicOnInteraction);
   }
+  document.addEventListener("click", startMusicOnInteraction);
+  document.addEventListener("scroll", startMusicOnInteraction);
+  document.addEventListener("keydown", startMusicOnInteraction);
 
   // Toggle music on button click
-  musicToggle.addEventListener("click", function () {
+  musicToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
     if (bgMusic.paused) {
       bgMusic.play().then(function() {
         musicToggle.classList.add("active");
         localStorage.setItem("musicPlaying", "true");
-      }).catch(function(error) {
-        console.log("Audio playback error:", error);
-      });
+      }).catch(function() {});
     } else {
       bgMusic.pause();
       musicToggle.classList.remove("active");
       localStorage.setItem("musicPlaying", "false");
     }
   });
-
-  // Resume music on any user interaction if it was playing before
-  document.addEventListener("click", function() {
-    if (bgMusic.paused && localStorage.getItem("musicPlaying") === "true") {
-      bgMusic.play().catch(function() {});
-    }
-  }, { once: true });
 });

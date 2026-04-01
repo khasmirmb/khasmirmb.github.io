@@ -33,10 +33,6 @@
 
 <body>
 
-    <!-- Custom Cursor -->
-    <div class="cursor-dot" id="cursorDot"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
-
     <!-- Audio Element -->
     <audio id="bgMusic" loop>
       <source src="music/portfolio.mp3" type="audio/mpeg">
@@ -47,7 +43,7 @@
     <div id="preloader">
       <div class="loader-content">
         <span class="loader-text">NOW LOADING</span>
-        <span class="loader-dots"></span>
+        <img src="images/icon.png" alt="Loading" class="loader-icon">
       </div>
     </div>
 
@@ -225,6 +221,16 @@
               </div>
             </div>
 
+            <div class="about-learning">
+              <h6 class="about-tech-title">Currently Exploring</h6>
+              <div class="about-tech-tags">
+                <span class="about-tech-tag">TypeScript</span>
+                <span class="about-tech-tag">Docker</span>
+                <span class="about-tech-tag">AWS</span>
+                <span class="about-tech-tag">Next.js</span>
+              </div>
+            </div>
+
             <a href="#contact" class="about-cta-link">
               <span>Let's work together</span>
               <i class="fas fa-arrow-right"></i>
@@ -243,7 +249,7 @@
         <h2 class="section-heading">Services & Expertise</h2>
       </div>
       <div class="row g-4">
-        <div class="col-lg-6 reveal-up">
+        <div class="col-lg-6 reveal-flip">
           <div class="svc-card">
             <div class="svc-card-accent">
               <i class="fas fa-laptop-code svc-card-icon"></i>
@@ -256,7 +262,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 reveal-up">
+        <div class="col-lg-6 reveal-flip">
           <div class="svc-card">
             <div class="svc-card-accent">
               <i class="fas fa-database svc-card-icon"></i>
@@ -269,7 +275,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 reveal-up">
+        <div class="col-lg-6 reveal-flip">
           <div class="svc-card">
             <div class="svc-card-accent">
               <i class="fas fa-brain svc-card-icon"></i>
@@ -282,7 +288,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 reveal-up">
+        <div class="col-lg-6 reveal-flip">
           <div class="svc-card">
             <div class="svc-card-accent">
               <i class="fas fa-mobile-alt svc-card-icon"></i>
@@ -295,7 +301,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 reveal-up">
+        <div class="col-lg-6 reveal-flip">
           <div class="svc-card">
             <div class="svc-card-accent">
               <i class="fas fa-server svc-card-icon"></i>
@@ -308,7 +314,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 reveal-up">
+        <div class="col-lg-6 reveal-flip">
           <div class="svc-card">
             <div class="svc-card-accent">
               <i class="fas fa-bug svc-card-icon"></i>
@@ -338,8 +344,8 @@
         <span class="title-badge">Resume</span>
         <h2 class="section-heading">My Resume</h2>
       </div>
-      <h4 class="rsm-section-label reveal-up"><i class="fas fa-graduation-cap"></i> Education</h4>
-      <div class="rsm-cards rsm-cards-2 reveal-up">
+      <h4 class="rsm-section-label reveal-zoom"><i class="fas fa-graduation-cap"></i> Education</h4>
+      <div class="rsm-cards rsm-cards-2 reveal-zoom">
         <div class="rsm-card">
           <div class="rsm-card-inner">
             <i class="fas fa-graduation-cap rsm-card-bg-icon"></i>
@@ -362,8 +368,8 @@
         </div>
       </div>
 
-      <h4 class="rsm-section-label reveal-up"><i class="fas fa-briefcase"></i> Experience</h4>
-      <div class="rsm-cards rsm-cards-3 reveal-up">
+      <h4 class="rsm-section-label reveal-zoom"><i class="fas fa-briefcase"></i> Experience</h4>
+      <div class="rsm-cards rsm-cards-3 reveal-zoom">
         <div class="rsm-card rsm-card-featured">
           <div class="rsm-card-inner">
             <i class="fas fa-code rsm-card-bg-icon"></i>
@@ -407,7 +413,7 @@
       </div>
       <div class="row g-4">
 
-        <div class="col-lg-4 col-md-6 reveal-up">
+        <div class="col-lg-4 col-md-6 reveal-blur">
           <div class="proj-card">
             <div class="proj-card-top">
               <div class="proj-icon"><i class="fas fa-heartbeat"></i></div>
@@ -421,7 +427,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 reveal-up">
+        <div class="col-lg-4 col-md-6 reveal-blur">
           <div class="proj-card">
             <div class="proj-card-top">
               <div class="proj-icon"><i class="fas fa-car"></i></div>
@@ -435,7 +441,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 reveal-up">
+        <div class="col-lg-4 col-md-6 reveal-blur">
           <div class="proj-card proj-card-active">
             <div class="proj-card-top">
               <div class="proj-icon"><i class="fas fa-store"></i></div>
@@ -452,7 +458,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 reveal-up">
+        <div class="col-lg-4 col-md-6 reveal-blur">
           <div class="proj-card">
             <div class="proj-card-top">
               <div class="proj-icon"><i class="fas fa-handshake"></i></div>
@@ -466,7 +472,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 reveal-up">
+        <div class="col-lg-4 col-md-6 reveal-blur">
           <div class="proj-card">
             <div class="proj-card-top">
               <div class="proj-icon"><i class="fas fa-ship"></i></div>
@@ -480,7 +486,7 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 reveal-up">
+        <div class="col-lg-4 col-md-6 reveal-blur">
           <div class="proj-card">
             <div class="proj-card-top">
               <div class="proj-icon"><i class="fas fa-poll"></i></div>
@@ -501,25 +507,12 @@
   <!-- Contact section -->
   <section id="contact" class="section" data-section-num="05">
     <div class="container">
-      <div class="contact-split reveal-up">
+      <div class="contact-split reveal-right">
         <!-- Left: Dark info panel -->
         <div class="contact-dark-panel">
           <span class="contact-dark-label">Contact</span>
           <h2 class="contact-dark-heading">Let's Build<br>Something<br><span>Together.</span></h2>
-          <div class="contact-dark-info">
-            <div class="contact-dark-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Zamboanga City, Philippines</span>
-            </div>
-            <div class="contact-dark-item">
-              <i class="fas fa-phone"></i>
-              <span>09563350760</span>
-            </div>
-            <div class="contact-dark-item">
-              <i class="fas fa-envelope"></i>
-              <span>khasmirmb@gmail.com</span>
-            </div>
-          </div>
+          <p class="contact-dark-subtitle">Have a project in mind or want to collaborate? Reach out through any of these channels — I'd love to hear from you.</p>
           <div class="contact-dark-socials">
             <a href="https://www.facebook.com/KHZoldyck/" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/xkhasy" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -527,32 +520,43 @@
             <a href="https://github.com/khasmirmb" target="_blank"><i class="fab fa-github"></i></a>
           </div>
         </div>
-        <!-- Right: Form -->
-        <div class="contact-form-panel">
-          <h3 class="contact-form-heading">Send a Message</h3>
-          <form action="https://formspree.io/khasmirmb@gmail.com" method="POST" id="contactForm">
-            <div class="row g-3">
-              <div class="col-sm-6">
-                <input class="form-control contact-input" name="name" id="name" type="text" placeholder="Your Name" required>
-              </div>
-              <div class="col-sm-6">
-                <input class="form-control contact-input" name="email" id="email" type="email" placeholder="Your Email" required>
-              </div>
-              <div class="col-12">
-                <input class="form-control contact-input" name="subject" id="subject" type="text" placeholder="Subject">
-              </div>
-              <div class="col-12">
-                <textarea class="form-control contact-input" name="message" id="message" rows="5" placeholder="Your Message..." required></textarea>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn hire-me-btn w-100" id="submitBtn">
-                  <span>Send Message</span>
-                  <i class="fas fa-arrow-right ms-2"></i>
-                </button>
-                <div id="formStatus" class="form-status mt-3"></div>
-              </div>
+        <!-- Right: Contact cards -->
+        <div class="contact-cards-panel">
+          <a href="mailto:khasmirmb@gmail.com" class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">Email</span>
+              <span class="contact-card-value">khasmirmb@gmail.com</span>
             </div>
-          </form>
+            <i class="fas fa-arrow-right contact-card-arrow"></i>
+          </a>
+          <a href="tel:09563350760" class="contact-card">
+            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">Phone</span>
+              <span class="contact-card-value">09563350760</span>
+            </div>
+            <i class="fas fa-arrow-right contact-card-arrow"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/al-khasmir-basaluddin-59512730b/" target="_blank" class="contact-card">
+            <div class="contact-card-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">LinkedIn</span>
+              <span class="contact-card-value">al-khasmir-basaluddin</span>
+            </div>
+            <i class="fas fa-arrow-right contact-card-arrow"></i>
+          </a>
+          <div class="contact-card contact-card-static">
+            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">Location</span>
+              <span class="contact-card-value">Zamboanga City, Philippines</span>
+            </div>
+          </div>
+          <a href="mailto:khasmirmb@gmail.com" class="btn hire-me-btn w-100 mt-3 justify-content-center">
+            <span>Email Me Directly</span>
+            <i class="fas fa-arrow-right ms-2"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -571,7 +575,7 @@
   <a href="#home" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
 
   <!-- Footer -->
-  <footer style="background-color: #1a1a1a;">
+  <footer class="site-footer">
     <div class="container py-5">
       <div class="row align-items-center">
         <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
