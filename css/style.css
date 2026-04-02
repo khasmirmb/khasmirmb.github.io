@@ -281,13 +281,23 @@ body {
 
 
 .navbar-brand {
-  font-size: 1.8rem;
-  font-weight: 900;
-  color: var(--dark) !important;
   text-decoration: none;
-  letter-spacing: 1px;
+  padding: 0;
 }
-.brand-dot { color: var(--secondary); }
+
+.brand-icon {
+  height: 36px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.brand-icon:hover {
+  transform: scale(1.1);
+}
+
+.navbar.scrolled .brand-icon {
+  height: 30px;
+}
 
 .navbar-nav {
   list-style: none;
@@ -1532,9 +1542,9 @@ body.loaded #preloader {
   position: relative;
 }
 
-.footer-brand { font-size: 2rem; font-weight: 800; color: var(--white); text-decoration: none; }
-.footer-brand span { color: var(--secondary); }
-.footer-brand:hover { color: var(--white); }
+.footer-brand { text-decoration: none; display: inline-block; }
+.footer-brand-icon { height: 40px; width: auto; transition: transform 0.3s ease; }
+.footer-brand-icon:hover { transform: scale(1.1); }
 .footer-tagline { font-size: 0.8rem; color: rgba(255,255,255,0.3); margin-top: 5px; margin-bottom: 0; }
 
 .footer-nav { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }

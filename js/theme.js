@@ -32,12 +32,14 @@ document.addEventListener("DOMContentLoaded", function () {
 // Word flip animation
 document.addEventListener("DOMContentLoaded", function () {
   var words = [
-    "Web Development",
+    "Full-Stack Web Apps",
     "Mobile Development",
     "Machine Learning",
     "Database Management",
-    "Desktop Applications",
-    "Roblox Studio"
+    "Cross-Platform Apps",
+    "Backend Systems",
+    "Roblox Studio",
+    "Data Analytics"
   ];
   var el = document.getElementById("typed-output");
   if (!el) return;
