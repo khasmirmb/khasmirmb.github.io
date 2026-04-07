@@ -1222,6 +1222,35 @@ body.loaded #preloader {
 .proj-name { font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 10px; }
 .proj-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px; flex-grow: 1; }
 .proj-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+.proj-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.proj-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.proj-link:hover {
+  color: var(--secondary);
+}
+
+.proj-link i {
+  font-size: 0.8rem;
+}
+
 .proj-tags span { font-size: 0.68rem; padding: 3px 8px; background: var(--bg); color: var(--text-muted); font-weight: 600; border: 1px solid var(--border); }
 
 .proj-github {
